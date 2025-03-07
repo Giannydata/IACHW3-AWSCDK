@@ -19,7 +19,7 @@ class Hw3CdkDbNetworkStack(Stack):
             ip_addresses = ec2.IpAddresses.cidr("10.0.0.0/16"),
             subnet_configuration = [
                 ec2.SubnetConfiguration(name="PublicSubnet", subnet_type = ec2.SubnetType.PUBLIC, cidr_mask=24),
-                ec2.SubnetConfiguration(name="PrivateSubnet1", subnet_type = ec2.SubnetType.PRIVATE_WITH_EGRESS, cidr_mask=24)
+                ec2.SubnetConfiguration(name="PrivateSubnet", subnet_type = ec2.SubnetType.PRIVATE_WITH_EGRESS, cidr_mask=24)
                 ]
         )
 
